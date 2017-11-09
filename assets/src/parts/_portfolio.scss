@@ -1,0 +1,86 @@
+.portfolio {
+	padding: rem(90) 0; 
+	width: 100%;
+	background-color: $bg;
+	&__info {
+		max-width: 500px; 
+		margin: 0 auto;  
+	}
+	&__title {
+		@include title();
+	}
+	&__text {
+		padding-bottom: rem(65);
+		@include text();
+	}  
+}
+
+.grid {
+	font-size: 0; 
+	&::after {
+		content: '';
+		display: block;
+		clear: both; 
+	}
+	&:hover .grid-item:not(:hover) {
+		@include transition(all .3s ease);
+		opacity: .6;
+	}
+	&__filters {
+		padding-bottom: rem(63); 
+		@extend .flex-row;
+		@include justify-content(center);
+	}
+	&__btn {
+		padding: rem(12) rem(15); 
+		@include open(12, $dark-text);
+		border: none;
+		background-color: transparent;
+		@include transition(all .3s linear);
+		position: relative;
+		&--checked {
+			&::after {
+				content: "";
+				position: absolute;
+				width: 38px;
+				height: 0;
+				border: 2px solid $details;
+				bottom: -5px;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}	
+		}
+		&:hover {
+			cursor: pointer;
+		}
+		&:focus {
+			cursor: pointer;
+			outline: none; 
+			&::after {
+				content: "";
+				position: absolute;
+				width: 38px;
+				height: 0;
+				border: 2px solid $details;
+				bottom: -5px;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}	
+		}
+	}
+	&-item {
+		padding: 5px;
+		float: left;
+		cursor: pointer;
+		&--img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
+
+
+
+

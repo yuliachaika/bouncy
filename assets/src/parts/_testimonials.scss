@@ -1,0 +1,80 @@
+.post {
+	padding: rem(80) 0 rem(100); 
+	width: 100%;
+	background-color: $bg;
+	&__container {
+		padding-bottom: rem(50); 
+		background-color: $white;  
+		&::after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+	}
+	&__info {
+		max-width: 500px; 
+		margin: 0 auto;  
+	}
+	&__title {
+		@include title();
+	}
+	&__text {
+		padding-bottom: rem(58);
+		@include text();
+	}
+	&-slider {
+		padding: rem(50) rem(70) rem(35) rem(95); 
+		background-color: $white; 
+		&:focus {
+			outline: none;
+		} 
+		&__photo {
+			float: left;
+			width: rem(113);
+			height: rem(113);
+			overflow: hidden;
+			border-radius: 50%;   
+		}
+		&__info {
+			padding-left: rem(200);
+		}
+		&__text {
+			padding-bottom: rem(22); 
+			@include open(28, $text);
+			text-align: left;
+			letter-spacing: 0.8px;
+		}
+		&__title {
+			padding-bottom: rem(4); 
+			@include open(20, $details);
+			font-weight: 700; 
+			text-transform: uppercase;
+			letter-spacing: 0.64px;
+		}
+		&__subtitle {
+			color: $dark-text;
+			font-family: "Open Sans";
+			font-size: rem(14);
+			font-weight: 400;
+			line-height: rem(20);
+			text-transform: uppercase;
+			letter-spacing: 0.56px;
+		}
+	}  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

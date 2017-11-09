@@ -1,0 +1,19 @@
+.contact {
+	padding-top: rem(78);
+	padding-bottom: rem(56); 
+	&__info {
+		max-width: 500px; 
+		margin: 0 auto;  
+	}
+	&__title {
+		@include title();
+	}
+	&__text {
+		padding-bottom: rem(70);
+		@include text();
+	}
+	&__map {
+		height: rem(440);
+		width: 100%;
+	}
+}

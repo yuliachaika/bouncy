@@ -1,0 +1,65 @@
+
+/* ---general--- */
+
+@mixin box-sizing($box) {
+	-webkit-box-sizing: $box; 
+	-moz-box-sizing: $box; 
+	box-sizing: $box;
+}
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-ms-transition: $args;
+	-o-transition: $args;
+	transition: $args;
+}
+
+/* ---functions--- */
+
+@function rem($pixels, $context: 16) {
+	@return #{$pixels/$context}rem;
+}
+
+/* ---flex--- */
+
+@mixin direction($dir) {
+	-webkit-flex-direction: $dir;
+	-ms-flex-direction: $dir;
+	flex-direction: $dir;
+}
+@mixin wrap($w) {
+	-webkit-flex-wrap: $w; 
+	-ms-flex-wrap: $w; 
+	flex-wrap: $w;
+} 
+@mixin basis($s) {
+	-webkit-flex-basis: $s; 
+	flex-basis: $s; 
+}
+
+@mixin justify-content($justify) {
+	-webkit-justify-content: $justify; 
+	justify-content: $justify;
+}
+@mixin align-items($align) {
+	-webkit-align-items: $align; 
+	align-items: $align;
+} 
+@mixin align-self($align) {
+	-webkit-align-self: $align; 
+	align-self: $align; 
+} 
+
+@mixin flex-cont($c) {
+	display: flex;
+	@include direction($c);
+	@include wrap(wrap);
+}
+
+/* ---bg--- */
+
+@mixin bg($url) {
+	background-image: url($url); 
+	background-repeat: no-repeat;
+	background-size: cover;
+}

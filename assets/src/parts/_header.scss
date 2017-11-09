@@ -1,0 +1,104 @@
+.hero {
+	padding: rem(40) 0 rem(77); 
+	width: 100%;
+	height: 100vh;
+	@include bg('../img/layer-1.png');
+	background-attachment: fixed;
+	background-position: center;
+	position: relative;
+	z-index: 1;
+	&::before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url('../img/layer-2.png');
+		z-index: -1;
+	}
+	&__container {
+		height: 100%; 
+		@extend .flex-col;
+		@include justify-content(space-between);
+		@include align-items(center);
+	}
+	&__nav {
+		width: 100%;
+		@extend .flex-row;
+		@include justify-content(space-between);
+		@include align-items(center);	 
+	}
+	&__logo {
+		&-link {
+			@include transition(all .8s ease);
+			display: inline-block;
+			&:hover .hero__svg {
+				@include transition(all .8s ease);
+				fill: $details;
+			}
+		}
+	}
+	&__menu {
+		@extend .flex-row;
+		@include justify-content(flex-end);
+	} 
+	&__link {
+		@include btn();
+		&--active {
+			border-color: $white;
+		}
+		&:hover {
+			border-color: $white;
+		}
+		&:focus {
+			box-shadow: 1px 1px 2px rgba(#fff, .2);
+		}
+	}
+	&__info {
+		max-width: rem(630);
+	}
+	&__title {
+		color: $white;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: rem(35);
+		font-weight: 300;
+		line-height: rem(70);
+		text-transform: uppercase;
+		letter-spacing: rem(7);
+		text-align: center;
+	} 
+	&__text {
+		@include open(28, $white);
+		text-align: center;
+		letter-spacing: 0.8px;
+	}
+	&__scroll {
+		display: block;
+		width: rem(36); 
+		height: rem(36); 
+		background-color: $details;
+		border-radius: 50%; 
+		position: relative;
+		@include transition(all .3s linear);
+		&::after {
+			content: '';
+			position: absolute;
+			width: rem(12);
+			height: rem(7);
+			@include bg('../img/arrow.png');  
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin: auto;    	
+		}
+		&:hover {
+			background-color: transparent;
+		}
+	}
+}
+
+
+

@@ -1,0 +1,60 @@
+.footer {
+	padding: rem(15) 0 rem(70); 
+	text-align: center;
+	&__item {
+		padding: 0 rem(2); 
+		display: inline-block;
+	}
+	&__logo {
+		@include transition(all .8s ease-out);
+		&-wrap {
+			@include transition(all .8s ease-out);
+			display: inline-block;
+			padding-bottom: rem(10);
+			&:hover {
+				opacity: .5; 
+			}
+		}
+	}
+	&__text {
+		padding-bottom: rem(37); 
+		@include text();
+	}
+	&__link {
+		display: block;
+		width: rem(28);
+		height: rem(28);
+		@include transition(all .5s ease-out);
+		&--fb {
+			@include bg('../img/fb.svg');
+			&:hover {
+				@include bg('../img/fb-hover.svg');
+			}   
+		}
+		&--tw {
+			@include bg('../img/tw.svg');
+			&:hover {
+				@include bg('../img/tw-hover.svg');
+			}   
+		}
+		&--in {
+			@include bg('../img/in.svg');
+			&:hover {
+				@include bg('../img/in-hover.svg');
+			}   
+		}
+		&--inst {
+			@include bg('../img/inst.svg');
+			&:hover {
+				@include bg('../img/inst-hover.svg');
+			}   
+		}
+		&--vimeo {
+			@include bg('../img/vimeo.svg');
+			&:hover {
+				@include bg('../img/vimeo-hover.svg');
+			} 
+		}
+	}
+
+}

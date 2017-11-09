@@ -1,0 +1,39 @@
+* {
+	@include box-sizing(border-box); 
+}
+
+.container {
+	padding: 0 rem(15);
+	margin: 0 auto;
+	max-width: rem(1200);
+	&--grid {
+		padding: 0 rem(40);
+	}
+}
+a {
+	cursor: pointer;
+	text-decoration: none; 
+}
+
+.flex-row {
+	display: flex;
+	@include direction(row);
+	@include wrap(wrap); 
+}
+.flex-col {
+	display: flex;
+	@include direction(column);
+	@include wrap(wrap); 
+}
+
+
+
+
+
+
+
+
+
+
+
+

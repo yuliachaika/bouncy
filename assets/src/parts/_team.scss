@@ -1,0 +1,105 @@
+.team {
+	padding-top: rem(80);
+	padding-bottom: rem(100); 
+	&__info {
+		max-width: 500px; 
+		margin: 0 auto;  
+	}
+	&__title {
+		@include title();
+	}
+	&__text {
+		padding-bottom: rem(50);
+		@include text();
+	}
+	&__photo	{
+		float: left;
+		width: 285px;
+		height: 364px;
+		overflow: hidden;
+	}
+	&__slider {
+		padding: rem(10) rem(70) rem(60); 
+		width: 100%;
+		&:focus {
+			outline: none;
+		} 
+		&::after {
+			content: '';
+			display: block;
+			clear: both;
+		} 
+		&-info {
+			padding-top: rem(30); 
+			max-width: rem(430);  
+			float: right;
+		}
+		&-header {
+			padding-right: rem(46);
+			margin-bottom: rem(12);
+			border-right: 5px solid $details;  
+		}
+		&-title {
+			color: $dark-text;
+			font-family: 'Open Sans', sans-serif;
+			font-size: rem(20);
+			font-weight: 400;
+			line-height: rem(28);
+			letter-spacing: 0.8px;
+			text-align: right; 
+		}
+		&-subtitle {
+			color: $text;
+			font-family: 'Source Sans Pro', sans-serif;
+			font-size: rem(14);
+			font-weight: 300;
+			line-height: rem(25);
+			text-transform: uppercase;
+			font-style: italic;
+			letter-spacing: 1.4px;
+			text-align: right; 
+		}
+		&-text {
+			padding-right: rem(46);
+			@include text();
+			text-align: right;
+		}
+
+	}
+}
+
+.slick-dots li button {
+	display: none;
+}
+.slick-dots li:not(.slick-active) {
+	position: relative;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	padding: 0;
+	cursor: pointer;
+	border-radius: 50%;
+	border: 1px solid $details;
+	transition: all 150ms linear;
+}
+.slick-dots li.slick-active {
+	position: relative;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	padding: 0;
+	cursor: pointer;
+	border-radius: 50%;
+	border: 1px solid $details;
+	transition: all 150ms linear;
+	background: $details;
+}
+
+
+
+
+
+
+
