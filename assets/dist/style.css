@@ -145,7 +145,6 @@ a {
   background-image: url("../img/layer-1.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
   position: relative;
   z-index: 1; }
@@ -158,6 +157,7 @@ a {
     top: 0;
     left: 0;
     background: url("../img/layer-2.png");
+    background-size: cover;
     z-index: -1; }
   .hero__container {
     height: 100%;
@@ -252,6 +252,9 @@ a {
     .hero__scroll:hover {
       background-color: transparent; }
 
+@media screen and (min-width: 1024px) {
+  .hero {
+    background-attachment: fixed; } }
 .portfolio {
   padding: 5.625rem 0;
   width: 100%;
